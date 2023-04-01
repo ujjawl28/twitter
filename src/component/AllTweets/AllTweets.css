@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+#AllTweetsMain{
+    width: 750px;
+    /* margin-top: 30px; */
+    border: 1px solid whitesmoke
+    
+}
+
+.Alltweet{
+    border: solid 2px whitesmoke;  
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+#Alltweetlogo{
+    width: 680px;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: solid 2px black; */
+}
+
+#Alltweetlogo i{
+    width: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+#Alltweetlogo button{
+    width: 80px;
+    /* margin-left: 0px; */
+    background-color: white;
+    border: 1px white solid;
+}
+.AlltweetP{
+    /* width: 100px; */
+  margin-left: 60px;
+  width: 600px;
+}
+
+.Alltweet .AlltweetName{
+    width: 150px;
+    font-size: 30px;
+    color: black;
+}
+
+
+.commentMessage{
+    height: 100px;
+    border: solid 2px whitesmoke;
+}
+.commentedBy{
+    color: black;
+}
+
+.commentedMessage{
+    padding-left: 40px;
+}
+
+.commentDetail{
+    margin-top: 5px;
+    width: 640px;
+    margin-bottom: 5px;
+}
+
+
+
+
+

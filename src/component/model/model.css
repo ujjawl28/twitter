@@ -1,0 +1,14 @@
+/* #commentBox{
+    height: 100vh;
+    width: 100vb;
+} */
+
+
+.commentBox{
+    height: 200px;
+}
+
+.inputComment{
+    width:50px;
+    border-radius: 5px
+}

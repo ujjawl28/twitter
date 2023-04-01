@@ -1,0 +1,41 @@
+.profil{
+    height: 40px;
+    width:  40px;
+    border-radius: 50%;
+    display: inline;
+  }
+
+  #Searchmain{
+    min-width: 200px;
+    flex:0.25;
+    
+
+  }
+  .search{
+    background-color: whitesmoke;
+    border-radius:30px;
+    margin: 30px;
+     height: 35px;
+     width: 200px;
+  }
+
+ 
+
+#SearchLikes{
+  margin-left: 20px;
+  padding: 20px;
+  background-color: #f5f8fa;
+  border-radius: 20px;
+  width: 330px;
+
+}
+#SearchLikes > #SearchContent{
+  width: 400px;
+  font-size: 20px;
+}
+
+#SearchLikes > h2{
+  font-size: 18px;
+  font-weight: 800;
+  width: 250px;
+}

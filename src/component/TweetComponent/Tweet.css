@@ -1,0 +1,43 @@
+.middle{
+min-width: 300px;
+flex:0.5;
+}  
+  #tweet{
+    padding-top: 15px;
+    padding-left: 15px;
+    border-right: 2px whitesmoke solid;
+  }
+  #tweetPage{
+    width: 100px;
+  }
+  .profil{
+    height: 40px;
+    width:  40px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  .input1{
+    margin-left: 20px;
+    border : solid 0px white;
+    width: 300px;
+    font-size: 25px;
+  }
+  .optional{
+    display: inline;
+    font-size: 30px;
+  }
+  #tweetForm{
+    width: 100%;
+  }
+  .btnContainer{
+    width: 100%;
+  }
+  .btn1{
+   margin-left: 80%;
+    border-radius: 30px;
+    width: 80px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+ 

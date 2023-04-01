@@ -1,25 +1,62 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Slide  from './component/SlideComponenets/Slide';
+// import Slide from "./component/SlideComponenet/Slide.jsx";
+import Tweet from "./component/TweetComponent/Tweet";
+import Search from "./component/SearchComponent/Search";
+import Home from "./component/Home/home";
+import Explore from './component/Explore/explore';
+import Notification from './component/Notification/notification';
+import Profile from './component/Profile/profile';
+import Messages from './component/Messages/messages'; 
+import Lists from './component/Lists/lists';
+import Bookmarks from './component/Bookmarks/bookmarks';
+import Login  from './component/Login/login';
+import SignIn from './component/SignUp/signup';
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+ const router = createBrowserRouter([
+  {
+    path:"/",
+    element: <SignIn />
+  },
+  {
+    path:"/home",
+    element: <Home />,
+  },
+  {
+    path : "/explore",
+    element :< Explore />,
+  },{
+    path : "/notification",
+    element : < Notification />
+  },{
+    path: "/messages",
+    element : < Messages />,
+  },{
+    path : "/lists",
+    element: <Lists />,
+  },
+  {
+    path : "/profile",
+    element : < Profile />,
+  },{
+    path : "/bookmarks",
+    element : < Bookmarks />,
+  },{
+    path : "/login",
+    element : <Login />
+  },
+ ]);
+
+ return (
+  <RouterProvider router={router}></RouterProvider>
+  )
 }
+
+
 
 export default App;
