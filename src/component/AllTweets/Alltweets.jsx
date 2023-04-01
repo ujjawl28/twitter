@@ -19,11 +19,12 @@ function Alltweets() {
 
   useEffect(() => {
     user(setAns);
+    
   }, [like]);
 
+  
 
-
-
+   
   const db = getDatabase();
 
 
@@ -35,7 +36,7 @@ function Alltweets() {
         const commnts = it.cmnt;
         return (
           <div className='Alltweet' key={it.id} id={it.id} data-bs-spy="scroll">
-            <img className="profil" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" />
+            <img className="profil" src={`https://i.pravatar.cc/150?u=${it.userName}`} />
             <span className='AlltweetName'>{it.userName}</span>
             <p className='AlltweetP'>{it.mess}</p>
             <div id='Alltweetlogo'>

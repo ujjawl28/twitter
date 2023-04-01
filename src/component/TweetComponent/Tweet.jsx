@@ -50,7 +50,7 @@ function Tweet(){
       }
     }}>
          {getUserName()}
-      <img className="profil" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" />
+      <img className="profil" src={`https://i.pravatar.cc/150?u=${currentUser.username}`} />
       <input type='text' name='tweet' onChange={mess} className="input1" placeholder="What's happening ?"  required/>
       <br />
       <label className="optional">Optional : </label>
