@@ -20,11 +20,9 @@ const style = {
 };
 
 export default function TransitionsModal({open,setOpen,userId}) {
-//   const [open, setOpen] = React.useState(false);
-//   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
  const [ivalue,setIvalue] = React.useState("");
-
+ const [commentUser] = React.useState(JSON.parse(localStorage.getItem('user')));
 
  function addComment(userId, comment) {
   // Get a reference to the user's comment array in the database
@@ -84,7 +82,7 @@ export default function TransitionsModal({open,setOpen,userId}) {
                   if(!arr){
                     // arr[0] = ivalue;
                     // const ans = [ivalue];
-                    const ans = [{message : ivalue,name : clint }];
+                    const ans = [{message : ivalue,name : commentUser.username }];
                     console.log(ans);
                     update(ref(db, "user/"+userId),{
                         cmnt : ans,
@@ -96,7 +94,7 @@ export default function TransitionsModal({open,setOpen,userId}) {
                         alert("unsuccessful, error"+error);
                   })
                   }else{
-                    arr.push({message : ivalue,name : clint});
+                    arr.push({message : ivalue,name : commentUser.username});
                     update(ref(db, "user/"+userId),{
                         cmnt : arr,
                     })
