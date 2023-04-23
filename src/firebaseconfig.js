@@ -5,14 +5,23 @@ import { v4 as uuidv4 } from 'uuid';
 import React from "react";
 
 
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDqpvv4wW778pY2iBfO-31nAfb36tqRyBM",
+//   authDomain: "firstproject-f0d5d.firebaseapp.com",
+//   projectId: "firstproject-f0d5d",
+//   storageBucket: "firstproject-f0d5d.appspot.com",
+//   messagingSenderId: "480628115255",
+//   appId: "1:480628115255:web:e4ddcb3cd02132fca5fcb2",
+//   measurementId: "G-9BTPEY7WY3"
+// };
 const firebaseConfig = {
-  apiKey: "AIzaSyDqpvv4wW778pY2iBfO-31nAfb36tqRyBM",
-  authDomain: "firstproject-f0d5d.firebaseapp.com",
-  projectId: "firstproject-f0d5d",
-  storageBucket: "firstproject-f0d5d.appspot.com",
-  messagingSenderId: "480628115255",
-  appId: "1:480628115255:web:e4ddcb3cd02132fca5fcb2",
-  measurementId: "G-9BTPEY7WY3"
+  apiKey: "AIzaSyB8bUXvOl8rEtacuVkOwOcc_k7Gnc0f7a4",
+  authDomain: "twitter-clone-7686b.firebaseapp.com",
+  projectId: "twitter-clone-7686b",
+  storageBucket: "twitter-clone-7686b.appspot.com",
+  messagingSenderId: "150286244306",
+  appId: "1:150286244306:web:114e99ddfb09b585ec100b",
+  measurementId: "G-SZS3HY4GLM"
 };
 
 // Initialize Firebase
