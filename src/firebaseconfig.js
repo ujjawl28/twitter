@@ -15,13 +15,13 @@ import React from "react";
 //   measurementId: "G-9BTPEY7WY3"
 // };
 const firebaseConfig = {
-  apiKey: "AIzaSyB8bUXvOl8rEtacuVkOwOcc_k7Gnc0f7a4",
-  authDomain: "twitter-clone-7686b.firebaseapp.com",
-  projectId: "twitter-clone-7686b",
-  storageBucket: "twitter-clone-7686b.appspot.com",
-  messagingSenderId: "150286244306",
-  appId: "1:150286244306:web:114e99ddfb09b585ec100b",
-  measurementId: "G-SZS3HY4GLM"
+  apiKey: "AIzaSyBcyX5fQX2bYNfG5TLpzTFkJfy4MDhFCFo",
+  authDomain: "twitter-clone-main-161ab.firebaseapp.com",
+  projectId: "twitter-clone-main-161ab",
+  storageBucket: "twitter-clone-main-161ab.appspot.com",
+  messagingSenderId: "61960114692",
+  appId: "1:61960114692:web:b2864e12a44f7b7c909b51",
+  measurementId: "G-5M1VW13SKS"
 };
 
 // Initialize Firebase
