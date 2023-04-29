@@ -35,7 +35,7 @@ i{
 
 .Loginheading{
     width: fit-content;
-    margin-left: 280px;
+    margin-left: 260px;
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: white;
@@ -47,7 +47,7 @@ i{
 
 .LoginInput{
     width: 350px;
-    margin-left: 100px;
+    margin-left: 70px;
     font-size: 22px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -57,7 +57,7 @@ i{
 
 .LoginPassword{
     width: 350px;
-    margin-left: 100px;
+    margin-left: 70px;
     font-size: 22px;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -67,7 +67,7 @@ i{
 
 .LoginButton{
     width: 350px;
-    margin-left: 100px;
+    margin-left: 70px;
     font-size: 25px;
     margin-top: 20px;
     margin-bottom: 20px;

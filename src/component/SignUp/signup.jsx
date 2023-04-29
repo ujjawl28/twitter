@@ -7,7 +7,7 @@ function SignIn(){
     return(
         <div id="SignInMain">
         <div id="SignInPage">
-        <span className='twitterLogo'><i className="fa-brands fa-twitter icon" ></i></span>
+        <span className='twitterLogo twitterLogo1'><i className="fa-brands fa-twitter icon" ></i></span>
          <h1 className='SignInheading'>Sign Up To Twitter</h1>
 
          <form id="SignInForm" onSubmit={(e)=>{RegisterUser(e)}}>

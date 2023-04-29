@@ -16,38 +16,26 @@ function Slide(){
     <button type="submit" className="btn btn-outline-primary btn-lg add"> 
     <i className="fa-solid fa-house font"></i> <span className="signOut">Home</span></button>
     <br />
-    <button type="submit" className="btn btn-outline-primary btn-lg add" onClick={()=>{
-      navigate('/explore')
-    }}>
+    <button type="submit" className="btn btn-outline-primary btn-lg add" >
        <i className="fa-sharp fa-solid fa-magnifying-glass font"></i><span className="signOut">Explore</span></button>
     <br />
-       <button type="submit" className="btn btn-outline-primary btn-lg add" onClick={()=>{
-      navigate('/notification')
-    }} >
+       <button type="submit" className="btn btn-outline-primary btn-lg add" >
        <i className="fa-regular fa-bell font"></i>  <span className="signOut">Notification</span>
          </button>
          <br />
-         <button type="submit"className="btn btn-outline-primary btn-lg add" onClick={()=>{
-      navigate('/messages')
-    }} >
+         <button type="submit"className="btn btn-outline-primary btn-lg add"  >
          <i className="fa-regular fa-message font"></i>   <span className="signOut">Message</span>
            </button>
            <br />
-           <button type="submit" className="btn btn-outline-primary btn-lg add" onClick={()=>{
-      navigate('/bookMarks')
-    }}>
+           <button type="submit" className="btn btn-outline-primary btn-lg add" >
            <i className="fa-regular fa-bookmark font"></i>  <span className="signOut">BookMarks</span>
            </button>
            <br />
-           <button type="submit" className="btn btn-outline-primary btn-lg add" onClick={()=>{
-      navigate('/lists')
-    }}>
+           <button type="submit" className="btn btn-outline-primary btn-lg add" >
            <i className="fa-solid fa-list font"></i>   <span className="signOut">Lists</span>
            </button>
            <br />
-           <button type="submit" className="btn btn-outline-primary btn-lg add" onClick={()=>{
-      navigate('/profile')
-    }}>
+           <button type="submit" className="btn btn-outline-primary btn-lg add" >
            <i className="fa-regular fa-user font"></i>   <span className="signOut">Profile</span>
            </button>
            <br />

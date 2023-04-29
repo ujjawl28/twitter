@@ -8,7 +8,8 @@ function isEmptyOrSpaces(str){
     return str === null || str.match(/^ *$/) !== null;
 }
  function validation(emailValue,userValue,passwordValue){
-    let emailCheck = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook)\.com$/;
+    // let emailCheck = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook)\.com$/;
+    let emailCheck = /^[a-zA-Z0-9+_.-]+@(gmail|yahoo|outlook)\.com$/;
     // let emailCheck = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
     let userCheck = /^[a-zA-Z0-9]{5,}$/;
 

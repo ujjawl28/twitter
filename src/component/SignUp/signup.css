@@ -26,6 +26,11 @@
 
 .SignInLogo{
     background-color: white;
+    
+}
+.twitterLogo1{
+    margin-left:  0px;
+    /* padding-left: 0px; */
 }
 
 i{
@@ -34,7 +39,7 @@ i{
 
 .SignInheading{
     width: fit-content;
-    margin-left: 280px;
+    margin-left: 250px;
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: white;
@@ -46,7 +51,7 @@ i{
 
 .SignInInput{
     width: 350px;
-    margin-left: 100px;
+    margin-left: 50px;
     font-size: 22px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -56,7 +61,7 @@ i{
 
 .SignInPassword{
     width: 350px;
-    margin-left: 100px;
+    margin-left: 50px;
     font-size: 22px;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -66,7 +71,7 @@ i{
 
 .SignInButton{
     width: 350px;
-    margin-left: 100px;
+    margin-left: 50px;
     font-size: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
