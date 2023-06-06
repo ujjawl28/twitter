@@ -53,6 +53,7 @@ i{
     margin-bottom: 20px;
     background-color: white;
     border-radius: 15px;
+    padding-left: 11px;
 }
 
 .LoginPassword{
@@ -63,6 +64,7 @@ i{
     margin-bottom: 10px;
     background-color: white;
     border-radius: 15px;
+    padding-left: 11px;
 }
 
 .LoginButton{

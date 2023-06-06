@@ -45,6 +45,16 @@
   display: flex;
 }
 
+.middleStyle{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 25px;
+  padding-top: 30px;
+  
+}
+
 
 
 

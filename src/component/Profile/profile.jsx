@@ -2,9 +2,10 @@ import React from 'react'
 // import './Explore.css';
 function Profile() {
   return (
-    <div className='profile'>
-      <h1> Profile</h1>
-    </div>
+     <div className='middle  middleStyle'>
+     <h1> Profile Page </h1>
+     <h2> Coming Soon... </h2>
+   </div>
   )
 }
 

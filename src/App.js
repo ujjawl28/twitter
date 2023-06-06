@@ -26,27 +26,35 @@ function App() {
   {
     path:"/home",
     element: <Home />,
+    children :[
+      {
+       path : '/home',
+       element : <Tweet />
+      },
+      {
+        path : "/home/explore",
+        element :< Explore />,
+      },{
+        path : "/home/notification",
+        element : < Notification />
+      },{
+        path: "/home/messages",
+        element : < Messages />,
+      },{
+        path : "/home/lists",
+        element: <Lists />,
+      },
+      {
+        path : "/home/profile",
+        element : < Profile />,
+      },{
+        path : "/home/bookmarks",
+        element : < Bookmarks />,
+      },
+    ]
+
   },
-  {
-    path : "/explore",
-    element :< Explore />,
-  },{
-    path : "/notification",
-    element : < Notification />
-  },{
-    path: "/messages",
-    element : < Messages />,
-  },{
-    path : "/lists",
-    element: <Lists />,
-  },
-  {
-    path : "/profile",
-    element : < Profile />,
-  },{
-    path : "/bookmarks",
-    element : < Bookmarks />,
-  },{
+ {
     path : "/login",
     element : <Login />
   },
