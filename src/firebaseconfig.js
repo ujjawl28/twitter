@@ -24,14 +24,31 @@ import React from "react";
 //   measurementId: "G-5M1VW13SKS"
 // };
 
+// const firebaseConfig = {
+//   apiKey: "AIzaSyA4Yuzl5tdNmVnOj9k26EPH19zlwlyf9WY",
+//   authDomain: "twitter-data-e7751.firebaseapp.com",
+//   projectId: "twitter-data-e7751",
+//   storageBucket: "twitter-data-e7751.appspot.com",
+//   messagingSenderId: "350646527235",
+//   appId: "1:350646527235:web:d2e7c0d216056247f9f536",
+//   measurementId: "G-GVF0B84EM4"
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// // const analytics = getAnalytics(app);
+// const db = getDatabase(app);
+
+// new
+
 const firebaseConfig = {
-  apiKey: "AIzaSyA4Yuzl5tdNmVnOj9k26EPH19zlwlyf9WY",
-  authDomain: "twitter-data-e7751.firebaseapp.com",
-  projectId: "twitter-data-e7751",
-  storageBucket: "twitter-data-e7751.appspot.com",
-  messagingSenderId: "350646527235",
-  appId: "1:350646527235:web:d2e7c0d216056247f9f536",
-  measurementId: "G-GVF0B84EM4"
+  apiKey: "AIzaSyDVM8aT1DKt3CNmBqaOQLkr05bREDhWqBI",
+  authDomain: "twitter-data-4.firebaseapp.com",
+  projectId: "twitter-data-4",
+  storageBucket: "twitter-data-4.appspot.com",
+  messagingSenderId: "210246222512",
+  appId: "1:210246222512:web:38eaa20a39aa4f4bfab175",
+  measurementId: "G-P8DWZYF69G"
 };
 
 // Initialize Firebase
