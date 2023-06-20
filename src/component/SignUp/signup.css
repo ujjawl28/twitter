@@ -5,21 +5,22 @@
 }
 
 #SignInMain{
-    background-color: gray;
-    width: 1530px;
-    height: 713px;
-   
-    padding-top: 100px;
+    background-color: rgb(153,153,153);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
 }
 
 #SignInPage{
     text-align: center;
     height: 500px;
     width: 800px;
-    /* margin-top: 100px; */
-    margin-left: 400px;
-    margin-right: auto;
-    border: 2px solid black;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 20px;
     background-color: white;
     border-radius: 15px;
 }
@@ -30,8 +31,7 @@
 }
 .twitterLogo1{
     margin-left:  0px;
-    /* padding-left: 0px; */
-}
+   }
 
 i{
     background-color: white;
@@ -39,45 +39,39 @@ i{
 
 .SignInheading{
     width: fit-content;
-    margin-left: 250px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     background-color: white;
 }
 
 #SignInForm{
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
 }
 
 .SignInInput{
     width: 350px;
-    margin-left: 50px;
     font-size: 22px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     background-color: white;
     border-radius: 15px;
-    padding-left: 5px;
+    padding-left: 10px;
+    outline: none;
 }
 
 .SignInPassword{
     width: 350px;
-    margin-left: 50px;
     font-size: 22px;
-    margin-top: 15px;
-    margin-bottom: 10px;
     background-color: white;
     border-radius: 15px;
-    padding-left: 5px;
-
+    padding-left: 10px;
+    outline: none;
 }
 
 .SignInButton{
     width: 350px;
-    margin-left: 50px;
     font-size: 25px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     background-color: black;
     border-radius: 15px;
     color: white;

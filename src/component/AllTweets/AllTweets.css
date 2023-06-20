@@ -4,7 +4,7 @@
 }
 
 #AllTweetsMain{
-    width: 750px;
+    width: 100%;
     /* margin-top: 30px; */
     border: 1px solid whitesmoke
     
@@ -61,7 +61,7 @@
 
 .commentDetail{
     margin-top: 5px;
-    width: 640px;
+    width: 100%;
     margin-bottom: 5px;
 }
 
