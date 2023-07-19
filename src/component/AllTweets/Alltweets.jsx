@@ -83,7 +83,6 @@ function Alltweets() {
               }}><i className="fa-regular fa-heart" ></i> {it.likes} </button>
               <button><i className="fa-solid fa-share"></i> </button>
 
-
             </div >
             {commnts && <div className='commentDetail'>{
               commnts.map((element,idx) => {
@@ -98,8 +97,6 @@ function Alltweets() {
             </div>
             }
           </div>
-
-
         )
 
       })

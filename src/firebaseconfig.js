@@ -3,6 +3,8 @@ import { initializeApp } from "firebase/app";
 import {getDatabase,ref,set,child,remove,update,onValue,get} from 'firebase/database'
 import { v4 as uuidv4 } from 'uuid';
 import React from "react";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 // const firebaseConfig = {
@@ -68,9 +70,29 @@ function InsertData(message,url,user){
         likes : 0,
         
     }).then(()=>{
-        alert('data stored successfully');
+        // alert('data stored successfully');
+        toast.success('data stored successfully', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
     }).catch((error)=>{
-        console.log("unsuccessful"+error);
+        // console.log("unsuccessful"+error);
+        toast.error("unsuccessful"+error, {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
     }) 
 }
 

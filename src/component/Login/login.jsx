@@ -2,6 +2,10 @@ import React from 'react';
 import './login.css';
 import { Link } from 'react-router-dom';
 import AuthenticateUser from './loginUtility';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 function Login(){
     return(
         <div id="LoginMain">
@@ -21,6 +25,7 @@ function Login(){
             </div>
          </form>
         </div>
+        <ToastContainer />
         </div>
     )
 }

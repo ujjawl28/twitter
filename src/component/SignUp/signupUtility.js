@@ -1,8 +1,9 @@
 import {getDatabase,ref,set,child,remove,update,onValue,get} from 'firebase/database'
 // import React  from 'react';
 import {db} from '../../firebaseconfig'
-// import { AES,CryptoJS } from 'crypto-js';
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function isEmptyOrSpaces(str){
     return str === null || str.match(/^ *$/) !== null;
@@ -14,17 +15,48 @@ function isEmptyOrSpaces(str){
     let userCheck = /^[a-zA-Z0-9]{5,}$/;
 
     if(isEmptyOrSpaces(emailValue) || isEmptyOrSpaces(userValue) || isEmptyOrSpaces(passwordValue)){
-        alert("You cannot left any field empty");
+        // alert("You cannot left any field empty");
+        // toast("")
+        toast.error(' You cannot left any field empty', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
         return false;
     }
 
     if(!emailCheck.test(emailValue)){
-        alert("enter a valid email");
+     
+        toast.error('enter a valid email', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
         return false;
     }
 
     if(!userCheck.test(userValue)){
-        alert("-username can only be alphanumeric \n -usernamemust be atleast 5 characters")
+        // alert("-username can only be alphanumeric \n -usernamemust be atleast 5 characters")
+        toast.error(' -username can only be alphanumeric \n -usernamemust be atleast 5 characters', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
         return false;
     }
 
@@ -56,7 +88,16 @@ function isEmptyOrSpaces(str){
           get(child(dbRef, "UsersList/"+userValue))
           .then((snapshot)=>{
             if(snapshot.exists()){
-                alert("Account Already Exist");
+              toast.error('Account Already Exist', {
+                    position: "top-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
             }
             else{
                set(ref(db,"UsersList/"+userValue),
@@ -66,10 +107,30 @@ function isEmptyOrSpaces(str){
                 password : passwordValue,
               })
               .then(()=>{
-                alert("User added successfully");
+                // alert("User added successfully");
+                toast.success('User added successfully', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
               })
               .catch((error)=>{
-                alert("error"+error);
+                // alert("error"+error);
+                toast.error(`${error}`, {
+                    position: "top-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
               })
     
             }

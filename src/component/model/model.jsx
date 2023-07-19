@@ -6,7 +6,9 @@ import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { update,get, ref,child} from 'firebase/database';
-import {db} from '../../firebaseconfig'
+import {db} from '../../firebaseconfig';
+import { toast,ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const style = {
   position: 'absolute',
   top: '50%',
@@ -37,7 +39,17 @@ export default function TransitionsModal({open,setOpen,userId}) {
 
     // Update the comments in the database
     update(commentRef, comments).then(() => {
-      console.log('Comment added successfully');
+      // console.log('Comment added successfully');
+      toast.success('Comment added successfully', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }).catch((error) => {
       console.error('Error adding comment:', error);
     });
@@ -75,20 +87,25 @@ export default function TransitionsModal({open,setOpen,userId}) {
               get(child(dbref, "user/"+userId))
               .then((snapshot)=>{
                   const arr = snapshot.val().cmnt;
-                  //  arr[0] = snapshot.val().cmnt;
-                  // console.log(snapshot.val().mess);
                   const clint = snapshot.val().userName
                    console.log(userId);
                   if(!arr){
-                    // arr[0] = ivalue;
-                    // const ans = [ivalue];
                     const ans = [{message : ivalue,name : commentUser.username }];
                     console.log(ans);
                     update(ref(db, "user/"+userId),{
                         cmnt : ans,
                     })
                     .then(()=>{
-                        alert("data successfully updated");
+                       toast.success("comment successfully added", {
+                          position: "top-center",
+                          autoClose: 5000,
+                          hideProgressBar: false,
+                          closeOnClick: true,
+                          pauseOnHover: true,
+                          draggable: true,
+                          progress: undefined,
+                          theme: "light",
+                          });
                     })
                     .catch((error)=>{
                         alert("unsuccessful, error"+error);
@@ -99,9 +116,27 @@ export default function TransitionsModal({open,setOpen,userId}) {
                         cmnt : arr,
                     })
                     .then(()=>{
-                        alert("data successfully updated");
+                       toast.success("comment successfully added", {
+                          position: "top-center",
+                          autoClose: 3000,
+                          hideProgressBar: false,
+                          closeOnClick: true,
+                          pauseOnHover: true,
+                          draggable: true,
+                          progress: undefined,
+                          theme: "light",
+                          });
                     }).catch((error)=>{
-                        alert("unsuccessful, error"+error);
+                        toast.error(`unsuccessful, error+${error}`, {
+                          position: "top-right",
+                          autoClose: 13,
+                          hideProgressBar: false,
+                          closeOnClick: true,
+                          pauseOnHover: true,
+                          draggable: true,
+                          progress: undefined,
+                          theme: "light",
+                          });
                   })
                   }
               }); 
@@ -113,6 +148,7 @@ export default function TransitionsModal({open,setOpen,userId}) {
           </Box>
         </Fade>
       </Modal>
+      <ToastContainer />
     </div>
   );
 }

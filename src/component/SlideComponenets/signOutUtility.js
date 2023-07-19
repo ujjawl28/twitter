@@ -1,6 +1,3 @@
-// import {getDatabase,ref,set,child,remove,update,onValue,get} from 'firebase/database'
-// import React  from 'react';
-
 
 
 var currentUser = null;

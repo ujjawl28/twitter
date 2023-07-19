@@ -1,6 +1,7 @@
 import {getDatabase,ref,set,child,remove,update,onValue,get} from 'firebase/database';
 import {db} from '../../firebaseconfig';
-// import { AES,CryptoJS } from 'crypto-js';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function isEmptyOrSpaces(str){
@@ -8,8 +9,7 @@ function isEmptyOrSpaces(str){
 }
 
 function login(user){
-
-    localStorage.setItem('keepLoggedIn','yes');
+  localStorage.setItem('keepLoggedIn','yes');
     localStorage.setItem('user',JSON.stringify(user));
     window.location="/home";
 }
@@ -25,12 +25,30 @@ function AuthenticateUser(e){
     const dbref = ref(db);
 
     if(isEmptyOrSpaces(userValue) || isEmptyOrSpaces(passwordValue)){
-        alert("You cannot left any field empty");
+        toast.error(' You cannot left any field empty', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
         return ;
     }
-
+ 
     if(passwordValue == ""){
-        alert("You cannot left any field empty");
+        toast.error(' You cannot left any field empty', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
         return ;
     }
 
@@ -44,19 +62,34 @@ function AuthenticateUser(e){
             login(snapshot.val());
         }
         else{
-            alert("Please Enter The Correct password"); 
+            toast.error('Please Enter The Correct password', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
         }
 
       }
       else{
-       alert("user does not exist");
+       toast.error('user does not exist', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
       }
       }); 
 }
 
- 
-
-// var pass12 = CryptoJS.AES.encrypt(passwordValue,passwordValue);
 
 
 

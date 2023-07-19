@@ -2,11 +2,12 @@ import React,{useState} from 'react'
 import './Tweet.css';
 import Alltweets from '../AllTweets/Alltweets';
 import {InsertData} from '../../firebaseconfig';
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Tweet(){
-    // const [arr,setArr] = useState([{itemMessage : "",
-    //     itemUrl : "",}]);
-    const [message,setMessage] = useState("");
+     const [message,setMessage] = useState("");
     const [url,setUrl] = useState("");
 
     function mess(e){
@@ -17,8 +18,6 @@ function Tweet(){
     function link(e){
         setUrl(e.target.value);
     }
-
-  
 
     var currentUser = null;
     var KeepLoggedIn= "";
@@ -46,7 +45,16 @@ function Tweet(){
       if(KeepLoggedIn == "yes"){
       InsertData(z,a,currentUser.username);
       }else{
-        alert("Please Login In First");
+        toast.error('Please Login In First', {
+          position: "top-right",
+          autoClose: 13,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
       }
     }}>
          {getUserName()}
@@ -56,21 +64,12 @@ function Tweet(){
       <label className="optional">Optional : </label>
       <input type='url' onChange={link} name='url'className="input1" placeholder='Enter image url' />
       <br />
-      {/* <div className='btnContainer'> */}
-
-      {/* { KeepLoggedIn == "yes"&& */}
       <button type="submit"  className="btn btn-primary btn1">Tweet</button> 
-      {/* } */}
-      {/* </div> */}
-       
-      </form>
+       </form>
 
-      
+      <ToastContainer />
       </div>
-      {/* <Alltweets  /> */}
-      {/* {console.log(arr)} */}
-
-     { KeepLoggedIn == "yes"&&
+      { KeepLoggedIn == "yes"&&
       <Alltweets  />
   }
       </div>
