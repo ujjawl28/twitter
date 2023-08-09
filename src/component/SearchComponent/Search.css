@@ -40,3 +40,11 @@
   font-weight: 800;
   width: 250px;
 }
+
+@media screen and (max-width : 900px) {
+  #Searchmain{
+    display: none;
+    flex: 0;
+    width: 0px;
+  }
+}

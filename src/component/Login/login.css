@@ -26,6 +26,7 @@
 
 .twitterLogo{
     background-color: white;
+    font-size: 25px;
 }
 
 i{
@@ -70,7 +71,35 @@ i{
     color: white;
 }
 
+@media screen and (max-width:900px) {
+    #LoginPage{
+        margin: 25px;
+    }
+}
+@media screen and (max-width:600px) {
+    #LoginPage{
+        margin: 15px;
+        width: 600px;
+        height: 400px;
+    }
 
+    .LoginInput{
+        width: 250px;
+        font-size: 20px;
+    }
+
+    .LoginButton{
+        width: 250px;
+        font-size: 20px;
+    }
+
+    .LoginPassword{
+        width: 250px;
+        font-size: 20px;
+    }
+
+
+}
 
 
 

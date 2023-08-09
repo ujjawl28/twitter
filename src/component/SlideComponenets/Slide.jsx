@@ -11,7 +11,7 @@ function Slide(){
   return(
     <div className="slide">
      
-      <span><i className="fa-brands fa-twitter icon" ></i></span>
+      <span className="twitterIcon"><i className="fa-brands fa-twitter icon" ></i></span>
 
     <button type="submit" className="btn btn-outline-primary btn-lg add" onClick={()=>{navigate('/home')}}> 
     <i className="fa-solid fa-house font"></i> <span className="signOut">Home</span></button>

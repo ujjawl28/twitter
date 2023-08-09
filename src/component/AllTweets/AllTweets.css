@@ -11,13 +11,13 @@
 }
 
 .Alltweet{
-    border: solid 2px whitesmoke;  
+    border: solid 1px whitesmoke;  
     padding-left: 15px;
     padding-top: 10px;
 }
 
 #Alltweetlogo{
-    width: 680px;
+    /* width: 680px; */
     display: flex;
     justify-content: space-evenly;
     /* border: solid 2px black; */
@@ -37,7 +37,7 @@
 .AlltweetP{
     /* width: 100px; */
   margin-left: 60px;
-  width: 600px;
+  width: max-content;
 }
 
 .Alltweet .AlltweetName{
@@ -48,15 +48,19 @@
 
 
 .commentMessage{
-    height: 100px;
+    height: 80px;
     border: solid 2px whitesmoke;
 }
 .commentedBy{
     color: black;
+    font-size: 28px;
 }
 
-.commentedMessage{
+.commentedMessage1{
     padding-left: 40px;
+    /* width: 200px;
+     */
+     width: fit-content;
 }
 
 .commentDetail{
@@ -65,7 +69,34 @@
     margin-bottom: 5px;
 }
 
+@media screen and (max-width : 700px) {
 
+    .Alltweet{
+        border: solid 1px whitesmoke;  
+        padding-left: 5px;
+        padding-top: 10px;
+    }
+
+    .Alltweet .AlltweetName{
+        width: fit-content;
+        font-size: 21px;
+        color: black;
+        margin-left: 7px;
+    }
+
+    .commentedBy{
+        color: black;
+        font-size: 21px;
+        margin-left: 6px;
+    }
+
+    .commentMessage{
+        height: 70px;
+        border: solid 2px whitesmoke;
+        padding-top: 8px;
+    }
+    
+}
 
 
 

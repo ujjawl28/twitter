@@ -89,7 +89,7 @@ function Alltweets() {
                 return(
                   <div  key={"element"+idx} className='commentMessage'>
                     <span className='commentedBy'>Reply by {element.name}</span>
-                    <p className='commentedMessage'>{element.message}</p>
+                    <p className='commentedMessage1'>{element.message}</p>
                   </div>
                   )
               })
