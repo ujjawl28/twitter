@@ -2,13 +2,12 @@ import React,{useState} from 'react'
 import './Tweet.css';
 import Alltweets from '../AllTweets/Alltweets';
 import {InsertData} from '../../firebaseconfig';
-import { ToastContainer,toast } from 'react-toastify';
+import { Slide, ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-function Tweet(){
+function Tweet({props}){
      const [message,setMessage] = useState("");
-    const [url,setUrl] = useState("");
+     const [url,setUrl] = useState("");
 
     function mess(e){
       
@@ -31,10 +30,12 @@ function Tweet(){
   return(
     <div className='middle'>
    
+   
+
     <div id='tweet'>
       <h2 id='tweetPage'>Home</h2>
     
-      <hr />
+      <hr style={{border:'1px solid rgb(206, 198, 198)'}}/>
       
     <form id='tweetForm' onSubmit={(event)=>{
       event.preventDefault();

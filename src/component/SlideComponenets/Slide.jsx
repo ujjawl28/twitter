@@ -1,15 +1,28 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
 import {SignOut} from "./signOutUtility";
 import { useNavigate } from "react-router-dom";
+import {GrClose} from 'react-icons/gr';
+import {RxHamburgerMenu} from 'react-icons/rx';
+
 
 
 import './Slide.css'
 
 function Slide(){
+  const [click,setClick] = useState(false);
   const navigate = useNavigate();
   return(
+    <>
+    <RxHamburgerMenu className={click ? 'openHumbergur' : 'Hamburger'} onClick={()=>{
+      setClick(true);
+     }}/>
+
     <div className="slide">
+
+    <GrClose className="closeIcons" onClick={()=>{
+      setClick(false);
+    }} />
      
       <span className="twitterIcon"><i className="fa-brands fa-twitter icon" ></i></span>
 
@@ -52,7 +65,7 @@ function Slide(){
            <i className="fa-solid fa-power-off font"></i> <span className="signOut">Sign Out</span>
            </button>
       </div>
-
+      </>
   )
 }
 

@@ -122,3 +122,80 @@
     margin-right: 2px;
   }
 }
+
+.closeIcons{
+  display: none;
+}
+
+.Hamburger,.openHumbergur {
+  display: none;
+}
+
+
+@media screen and (max-width : 500px) {
+
+  body:has(.openHumbergur) .slide{
+    min-width: 150px;
+    max-width: 300px;
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 2px;
+    position: fixed;
+    left: 10;
+    top: 10;
+    background-color: white;
+  }
+ 
+  body:has(.Hamburger) .slide{
+    /* width: 200px; */
+  
+    margin-left: 0px;
+    padding-left: 2px;
+    position: fixed;
+    left: -100%;
+  }
+
+  .Hamburger{
+    display: block;
+    position: fixed;
+    left: 20px;
+    top: 10px;
+    font-size: 25px;
+  }
+
+  .signOut{
+    color: black;
+    font-weight: 600px;
+    font-size: 15px;
+    margin-left: 20px;
+  }
+
+  .add{
+    color: black;
+    width: calc(100% - 12px);
+    font-weight: 500;
+    border : solid 1px whitesmoke;
+    margin-top: 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 0px;
+    background-color: white;
+  }
+
+  .closeIcons{
+    display: initial;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 21px;
+  }
+
+  .twitterIcon{
+    font-size: 35px;
+    color: blue;
+    margin-left: 25px;
+    width: 50px;
+  }
+}
